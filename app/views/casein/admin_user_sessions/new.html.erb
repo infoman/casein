@@ -1,7 +1,7 @@
 <%= form_for @admin_user_session, url: casein_admin_user_session_path do |f| %>
 	<% if @admin_user_session.errors.any? %>
 		<div id="error_messages" class="alert alert-danger">
-			<% @admin_user_session.errors.keys.each do |key| %>
+			<% @admin_user_session.errors.attribute_names.each do |key| %>
 				<%= (key.to_s.humanize + " ") unless key == :base %>
 				<%=  @admin_user_session.errors[key].first %>
 			<% end %>
