@@ -2,7 +2,7 @@
 
 require 'casein'
 require 'rails'
-require 'bootstrap-sass'
+require 'bootstrap'
 require 'jquery-rails'
 
 module Casein
