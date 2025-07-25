@@ -27,7 +27,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'bootstrap', '~> 5.3.3'
   s.add_dependency 'jquery-rails', '>= 0'
   s.add_dependency 'sassc-rails', '>= 2.0.0'
-  s.add_dependency 'scrypt', '>= 1.2.1'
+  s.add_dependency 'scrypt'
   s.add_dependency 'will_paginate', '>= 3.1.5'
 
   s.add_development_dependency 'capybara', '~> 3.0'
