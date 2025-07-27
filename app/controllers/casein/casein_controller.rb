@@ -4,11 +4,8 @@ require 'authlogic'
 
 module Casein
   class CaseinController < ApplicationController
-    require 'casein/casein_helper'
-    include Casein::CaseinHelper
-
-    require 'casein/config_helper'
-    include Casein::ConfigHelper
+    helper Casein::CaseinHelper
+    helper Casein::ConfigHelper
 
     layout 'casein_main'
 
