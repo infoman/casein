@@ -24,7 +24,7 @@ Gem::Specification.new do |s|
   ]
 
   s.add_dependency 'authlogic', '~> 6.1'
-  s.add_dependency 'bootstrap', '~> 5.3.3'
+  s.add_dependency 'bootstrap-sass', '~> 3.4.0'
   s.add_dependency 'jquery-rails', '>= 0'
   s.add_dependency 'dartsass-sprockets'
   s.add_dependency 'scrypt'
