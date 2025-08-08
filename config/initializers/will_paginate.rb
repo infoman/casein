@@ -35,9 +35,14 @@ module WillPaginate
         tag :li, link('&hellip;'.html_safe, '#'), class: 'disabled'
       end
 
-      def previous_or_next_page(page, text, classname)
+      def previous_or_next_page(page, text, classname, aria_label = nil)
         tag :li, link(text, page || '#'),
-            class: [(classname[0..3] if @options[:page_links]), (classname if @options[:page_links]), ('disabled' unless page)].join(' ')
+          'aria-label': aria_label,
+          class: [
+            (classname[0..3] if @options[:page_links]),
+            (classname if @options[:page_links]),
+            ('disabled' unless page)
+          ].join(' ')
       end
     end
   end
