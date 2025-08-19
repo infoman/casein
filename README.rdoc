@@ -8,9 +8,14 @@ As Casein is completely decoupled from the front end, it can be added to new or 
 
 Screenshots at: http://www.caseincms.com
 
+== WARNING
+
+This fork is not likely to be maintained in the future and is done purely to port a single project to modern Rails version.
+Do not expect it to be completely secure and do not expect further updates.
+
 ==Requirements
 
-This version of Casein is designed for Ruby on Rails 5.x/6.x and Ruby 2.4.10 or later.
+This version of Casein is jury-rigged for Ruby on Rails 8.x and Ruby 3.4 or later.
 
 Casein 5.1.1.5 was the last gem release compatible with Rails 4.x.
 
