@@ -23,6 +23,8 @@ Gem::Specification.new do |s|
     'README.rdoc'
   ]
 
+  s.required_ruby_version = '~> 3.4'
+
   s.add_dependency 'authlogic', '~> 6.1'
   s.add_dependency 'bootstrap-sass', '~> 3.4.0'
   s.add_dependency 'jquery-rails', '>= 0'
