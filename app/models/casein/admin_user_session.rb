@@ -4,8 +4,6 @@ module Casein
   class AdminUserSession < ::Authlogic::Session::Base
     include ActiveModel::Conversion
     extend ActiveModel::Naming
-    def persisted?
-      false
-    end
+    cookie_key 'casein_admin_user_credentials'
   end
 end
