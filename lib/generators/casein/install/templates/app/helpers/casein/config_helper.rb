@@ -42,6 +42,11 @@ module Casein
       %w[casein/casein casein/custom]
     end
 
+    # A list if JavaScript modules to include with importmap, empty by default
+    def casein_config_importmap_includes
+      %w[]
+    end
+
     # A list of stylesheets to include in the authentication layout. Do not remove the core casein/login, but you can change the load order, if required.
     def casein_config_auth_stylesheet_includes
       %w[casein/login casein/auth_custom]

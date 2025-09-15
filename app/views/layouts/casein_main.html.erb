@@ -4,16 +4,20 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  	<title><%= casein_generate_page_title %></title>
-  	<% casein_config_stylesheet_includes.each do |stylesheet| %>
-  		<%= stylesheet_link_tag(stylesheet) %>
-  	<% end %>
-  	
-  	<% casein_config_javascript_includes.each do |javascript| %>
-  		<%= javascript_include_tag(javascript) %>
-  	<% end %>
+    <title><%= casein_generate_page_title %></title>
+    <% casein_config_stylesheet_includes.each do |stylesheet| %>
+      <%= stylesheet_link_tag(stylesheet) %>
+    <% end %>
 
-  	<%= csrf_meta_tag %>
+    <% casein_config_javascript_includes.each do |javascript| %>
+      <%= javascript_include_tag(javascript) %>
+    <% end %>
+
+    <% casein_config_importmap_includes.each do |javascript| %>
+      <%= javascript_importmap_tags(javascript) %>
+    <% end %>
+
+    <%= csrf_meta_tag %>
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -48,7 +52,7 @@
       <% end %>
 
       <div class="container container-navbar-brand">
-        <%= link_to(image_tag(casein_config_logo, alt: casein_config_website_name), { controller: :casein }, class: "navbar-brand") %>   
+        <%= link_to(image_tag(casein_config_logo, alt: casein_config_website_name), { controller: :casein }, class: "navbar-brand") %>
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
             <span class="icon-bar"></span>
@@ -96,9 +100,9 @@
                 <%= yield :help %>
               </div>
             <% end %>
-            
+
             <%= yield %>
-            
+
             </div>
 
         </div>
