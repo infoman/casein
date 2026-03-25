@@ -180,8 +180,11 @@ module Casein
     end
 
     # e.g. casein_collection_select f, f.object, :article, :author_id, Author.all, :id, :name, { prompt: 'Select author' }
-    def casein_collection_select(form, obj, object_name, attribute, collection, value_method, text_method, options = {})
-      casein_form_tag_wrapper(collection_select(object_name, attribute, collection, value_method, text_method, strip_casein_options(options), merged_class_hash(options, 'form-control')), form, obj, attribute, options).html_safe
+    def casein_collection_select(form, obj, object_name, attribute, collection, value_method, text_method, options = {}, html_options = {})
+      html_options_to_use = merged_class_hash(options, 'form-control') # legacy support
+      html_options_to_use = options_hash_with_merged_classes(html_options, html_options_to_use[:class])
+
+      casein_form_tag_wrapper(collection_select(object_name, attribute, collection, value_method, text_method, strip_casein_options(options), html_options_to_use), form, obj, attribute, options).html_safe
     end
 
     def casein_date_select(form, obj, attribute, options = {})
