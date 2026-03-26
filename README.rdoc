@@ -34,7 +34,7 @@ Casein 5.1.1.5 was the last gem release compatible with Rails 4.x.
 
 — Add the Casein gem to your Gemfile:
 
-  gem 'casein', '~>5.5.1'
+  gem 'casein', '~>5.6', github: 'infoman/casein'
 
 — Then use bundler to install Casein and its dependencies:
 
